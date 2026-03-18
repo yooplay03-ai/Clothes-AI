@@ -193,11 +193,10 @@ moodfit/
 ├── apps/
 │   ├── web/          # Next.js 14 웹 앱
 │   ├── api/          # NestJS API 서버
-│   └── mobile/       # Expo (React Native) 앱
-├── packages/
-│   └── shared/       # 공유 타입 패키지 (@moodfit/shared)
-└── scripts/
-    └── crawl_musinsa.py  # 무신사 의류 이미지 크롤러
+│   ├── mobile/       # Expo (React Native) 앱
+│   └── spring-api/   # Spring Boot API 서버 (Java 17)
+└── packages/
+    └── shared/       # 공유 타입 패키지 (@moodfit/shared)
 ```
 
 ### 4-2. 시스템 구성도
@@ -232,7 +231,7 @@ moodfit/
 | **프론트엔드 (앱)** | React Native (Expo) |
 | **프론트엔드 (웹)** | Next.js 14+, TypeScript, Tailwind CSS |
 | **프론트엔드 (앱)** | React Native (Expo) |
-| **백엔드 API** | NestJS (Node.js) |
+| **백엔드 API** | NestJS (Node.js) / Spring Boot (Java 17) |
 | **데이터베이스** | PostgreSQL (프로덕션) / SQLite (테스트·로컬) |
 | **이미지 저장** | AWS S3 또는 Cloudflare R2 |
 | **AI 엔진** | Claude API (`@anthropic-ai/sdk`) — 코디 추천 + 의류 분류 |
@@ -302,17 +301,18 @@ cd apps/web && cp .env.local.example .env.local && npm run dev
 | Email | test@moodfit.com |
 | Password | test1234 |
 
-### 5-2. 의류 데이터 수집 (무신사 크롤러)
+### 5-2. Spring Boot API 실행
 
 ```bash
-# 전체 카테고리 수집
-python scripts/crawl_musinsa.py
-
-# 특정 카테고리 50개만 dry-run 확인
-python scripts/crawl_musinsa.py --category top --count 50 --dry-run
+cd apps/spring-api
+./mvnw spring-boot:run
 ```
 
-수집 카테고리: `top`(상의) / `outer`(아우터) / `bottom`(바지) / `shoes`(신발) / `bag`(가방) / `accessory`(액세서리)
+Eclipse에서 임포트: `File → Import → General → Existing Projects into Workspace → apps/spring-api`
+
+- 서버 포트: `8080`
+- 의류 이미지: `apps/spring-api/src/main/resources/static/images/` (660개)
+- DB 설정: `apps/spring-api/src/main/resources/application.properties`
 
 ### 5-3. 실제 API 키 연결
 
@@ -437,4 +437,4 @@ OPENWEATHER_API_KEY=...
 
 ---
 
-*마지막 업데이트: 2026년 3월*
+*마지막 업데이트: 2026년 3월 18일*
