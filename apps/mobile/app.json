@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "MoodFit",
+    "slug": "moodfit",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f0f0f"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.moodfit.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "MoodFit uses your location to get accurate weather data for outfit recommendations.",
+        "NSPhotoLibraryUsageDescription": "MoodFit needs access to your photo library to upload clothing images.",
+        "NSCameraUsageDescription": "MoodFit uses the camera to capture clothing photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f0f0f"
+      },
+      "package": "com.moodfit.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "MoodFit uses your location for weather-based outfit recommendations."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MoodFit accesses your photos to add clothing items to your wardrobe."
+        }
+      ]
+    ],
+    "scheme": "moodfit",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

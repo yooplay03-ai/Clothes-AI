@@ -1,0 +1,44 @@
+{
+  "crawled_at": "2026-03-10T18:07:58.976382",
+  "total_count": 3,
+  "categories": {
+    "top": {
+      "count": 3,
+      "items": [
+        {
+          "id": "5990312",
+          "name": "[패션플래닛X후브스] 필드 로우 셔츠 - 6col[일반/크롭]",
+          "brand": "후브스",
+          "price": 39900,
+          "image_url": "https://image.msscdn.net/images/goods_img/20260206/5990312/5990312_17726808130013_500.jpg",
+          "category": "top",
+          "sub_category": "",
+          "local_path": "data\\images\\top\\5990312.jpg",
+          "color": "unknown"
+        },
+        {
+          "id": "6069409",
+          "name": "SQUARE OVERSIZED CHECK SHIRT [ASH GRAY]",
+          "brand": "브랜디드",
+          "price": 66750,
+          "image_url": "https://image.msscdn.net/images/goods_img/20260303/6069409/6069409_17727835299051_500.jpg",
+          "category": "top",
+          "sub_category": "",
+          "local_path": "data\\images\\top\\6069409.jpg",
+          "color": "unknown"
+        },
+        {
+          "id": "6015673",
+          "name": "W.(SET)Tie Detail Layered Set Top [OATMEAL]_SEWTS025OATMEAL",
+          "brand": "세컨모놀로그",
+          "price": 55890,
+          "image_url": "https://image.msscdn.net/images/goods_img/20260212/6015673/6015673_17714893982471_500.jpg",
+          "category": "top",
+          "sub_category": "",
+          "local_path": "data\\images\\top\\6015673.jpg",
+          "color": "unknown"
+        }
+      ]
+    }
+  }
+}
