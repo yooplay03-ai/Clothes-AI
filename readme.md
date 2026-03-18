@@ -189,14 +189,15 @@ MoodFit은 사용자의 **기분, 날씨, 만나는 대상, 일정** 등 상황 
 ### 4-1. 모노레포 구조
 
 ```
-moodfit/
+Clothes-AI/
 ├── apps/
 │   ├── web/          # Next.js 14 웹 앱
 │   ├── api/          # NestJS API 서버
 │   ├── mobile/       # Expo (React Native) 앱
 │   └── spring-api/   # Spring Boot API 서버 (Java 17)
-└── packages/
-    └── shared/       # 공유 타입 패키지 (@moodfit/shared)
+├── packages/
+│   └── shared/       # 공유 타입 패키지 (@moodfit/shared)
+└── docker-compose.yml
 ```
 
 ### 4-2. 시스템 구성도
